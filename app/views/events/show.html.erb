@@ -1,25 +1,31 @@
 <%= provide(:title, @event.name)%>
 <p id="notice"><%= notice %></p>
 <%= render 'form' %>
-<h1>
+<h1 class= "float-text-right">
   <%= @event.name %>
 </h1>
 
+<br>
+<br>
+<br>
+<br>
 <center>
-<p>
+<p class= "float-text-right">
   <b>Start time:</b>
   <%= @event.start_at %>
 </p>
-
-<p>
+<br>
+<br>
+<p class= "float-text-right">
   <b>End time:</b>
   <%= @event.end_at %>
 </p>
+<br>
 </center>
 <footer>
 <center><h2>
 <%= link_to 'Calendar', calendar_path, class: "btn" %>
-<%= link_to 'Back', events_path, class: "btn" %> 
+<%= link_to 'Events List', events_path, class: "btn" %> 
 </h2>
 </center>
 </footer>

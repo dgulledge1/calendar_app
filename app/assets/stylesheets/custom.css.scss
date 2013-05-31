@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 tr {
-  color: #56300b;
+  color: black;
   font-size: 1.5em;
   letter-spacing: 0.25px;
   word-spacing: 0.5px;
@@ -34,6 +34,22 @@ div.navbar-inner
   color: white;
 }
 
-form{
-  align: center;
+
+
+.float-text-right{
+  position: absolute;
+  top: 200px;
+  right: 550px;
+  z-index: 1;
+  }
+
+.field{
+  position: fixed;
+  top: 150px;
+  left: 650px;
+  width: 20px;
+}
+
+.hero-unit{
+  background-color: #FFFFCC;
 }

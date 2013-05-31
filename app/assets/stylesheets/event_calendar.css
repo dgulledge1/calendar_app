@@ -31,6 +31,7 @@
 }
 
 .ec-month-name {
+  color: #FFFFCC;
   font-size: 16px;
   font-weight: bold;
 }
@@ -42,6 +43,7 @@
 /* Containers */
 .ec-body {
   position: relative;
+  right: 175px;
   border-right: 1px solid #303030;
   white-space: nowrap;
 }
@@ -54,8 +56,9 @@
   width: 100%;
   table-layout: fixed;
   padding: 2px 0;
-  background: #303030;
+  background: #ecede2;
   color: white;
+  
 }
 
 .ec-day-name {
