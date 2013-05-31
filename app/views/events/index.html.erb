@@ -1,0 +1,41 @@
+<h1><center>FRANKIE SAYS RELAX</center></h1>
+
+<table align="center">
+
+  <tr>
+  	<th>&nbsp</th>
+  	<th>&nbsp</th>
+    <th>Name</th>
+    <th>&nbsp</th>
+    <th>&nbsp</th>
+    <th>Start at</th>
+    <th>&nbsp</th>
+	<th>&nbsp</th>
+    <th>End at</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+  	<td>&nbsp</td>
+  	<td>&nbsp</td>
+  	<td><%= event.name %></td>
+  	<td> | </td>
+    <td>&nbsp</td>
+    <td><%= event.start_at %> </td>
+    <td>   |   </td>
+    <td>&nbsp</td>
+    <td><%= event.end_at %></td>
+	<td>&nbsp</td>
+    <td>[<%= link_to 'Show', event %>] </td>
+    <td>[<%= link_to 'Edit', edit_event_path(event) %>] </td>
+    <td>[<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>   
+  </tr>
+<% end %>
+
+</table>
+
+<br />
+
+<center><h2><%= link_to 'New Event', new_event_path, class: "btn" %> <%= link_to 'Calendar', calendar_path, class: "btn"%></h2></center>

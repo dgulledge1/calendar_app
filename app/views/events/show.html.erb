@@ -1,0 +1,25 @@
+<%= provide(:title, @event.name)%>
+<p id="notice"><%= notice %></p>
+<%= render 'form' %>
+<h1>
+  <%= @event.name %>
+</h1>
+
+<center>
+<p>
+  <b>Start time:</b>
+  <%= @event.start_at %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @event.end_at %>
+</p>
+</center>
+<footer>
+<center><h2>
+<%= link_to 'Calendar', calendar_path, class: "btn" %>
+<%= link_to 'Back', events_path, class: "btn" %> 
+</h2>
+</center>
+</footer>

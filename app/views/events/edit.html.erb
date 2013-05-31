@@ -1,0 +1,10 @@
+<%= provide(:title, "Editing " + @event.name)%>
+<h1>Editing <%= @event.name %></h1>
+
+<%= render 'form' %>
+<center><h2>
+<%= link_to 'Show', @event, class: "btn" %>  
+<%= link_to 'Calendar', calendar_path, class: "btn" %>
+<%= link_to 'Back', events_path, class: "btn" %> 
+</h2>
+</center>

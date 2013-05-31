@@ -1,0 +1,39 @@
+@import "bootstrap";
+
+tr {
+  color: #56300b;
+  font-size: 1.5em;
+  letter-spacing: 0.25px;
+  word-spacing: 0.5px;
+  padding: 3px;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+}
+
+td {
+  padding: 7px;
+}
+
+body {
+  padding-top:80px;
+}
+
+h1{
+  color: #000;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  font-size: 3.2em;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
+div.navbar-inner
+{
+  font-size: 1.5em;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  line-height:125%;
+  color: white;
+}
+
+form{
+  align: center;
+}
