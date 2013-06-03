@@ -19,9 +19,10 @@
   font-size: 11px;
   line-height: 14px;
   margin-left: 400px;
-  padding: 0;
-  border-bottom: 1px solid #d5d5d5;
+  padding: 15px;  
 }
+
+
 
 /* Month name header & links */
 .ec-calendar-header {
@@ -44,21 +45,25 @@
 .ec-body {
   position: relative;
   right: 175px;
-  border-right: 1px solid #303030;
+  border-right: 1px dotted #303030;
   white-space: nowrap;
+  border-bottom: 3px dotted #d5d5d5;
 }
 
 /* Day names */
 .ec-day-names {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -150px;
+  max-width: 120%;
+  width: 150%;
   table-layout: fixed;
   padding: 2px 0;
   background: #ecede2;
   color: white;
-  
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .ec-day-name {
@@ -68,12 +73,14 @@
 /* Rows container and Row */
 .ec-rows {
   position: absolute;
-  left: 0;
+  left: -150px;
   bottom: 0;
-  width: 100%;
+  width: 120%;
+  height: 250%;
   background: white;
   overflow: hidden;
-  border-right: 1px solid #d5d5d5;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .ec-row {
@@ -94,7 +101,7 @@
 }
 
 .ec-day-bg {
-  border-left: 1px solid #d5d5d5;
+  border-left: 1px solid black;
 }
 
 .ec-today-bg {
@@ -113,9 +120,9 @@
   text-align: right;
   padding: 0 5px;
   line-height: 16px;
-  border-top: 1px solid #d5d5d5;
-  border-left: 1px solid #d5d5d5;
-  border-bottom: 1px dotted #bbbbbb;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  
   background-color: #ecede2;
   overflow: hidden;
 }
@@ -174,7 +181,7 @@ a.ec-day-link {
 
 .ec-event :hover {
   /* doesn't look as good as js highlighting */
-  /* background-color: #2eac6a; */
+  background-color: #2eac6a;
 }
 
 .ec-event-bg a {

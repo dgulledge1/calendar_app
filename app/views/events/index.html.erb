@@ -1,4 +1,21 @@
-<h1><center>FRANKIE SAYS RELAX</center></h1>
+<%= provide(:title, 'Events')%>
+<header class= "navbar navbar-fixed-top navbar-inverse">
+	<div class ="navbar-inner">
+		<center>
+	    <h2>CALENDAR APP</h2>
+		</center>
+		<nav>
+			<ul class="nav pull-right">
+				<li></li>
+				<li><%= link_to "Calendar", calendar_path  %></li>
+				<li><%= link_to "New Event", new_event_path %></li>
+				<li><%= link_to "Log In", '#'%></li>
+				<li><%= link_to "Log Out", '#'%></li>
+			</ul>
+		</nav>
+	</div>		
+</header>
+<h1><center>Events List for USER.NAME</center></h1>
 
 <table align="center">
 
@@ -29,7 +46,7 @@
     <td><%= event.end_at %></td>
 	<td>&nbsp</td>
     <td>[<%= link_to 'Show/Edit', event %>] </td>
-    <td>[<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>   
+    <td>[<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>       
   </tr>
 <% end %>
 
@@ -37,4 +54,4 @@
 
 <br />
 
-<center><h2><%= link_to 'New Event', new_event_path, class: "btn" %> <%= link_to 'Calendar', calendar_path, class: "btn"%></h2></center>
+

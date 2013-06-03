@@ -1,5 +1,33 @@
-<h1>New event</h1>
+<%= provide(:title, 'New Event')%>
+<header class= "navbar navbar-fixed-top navbar-inverse">
+	<div class ="navbar-inner">
+		<center>
+	 	<h2>CALENDAR APP</h2>	
+		</center>
+		<nav>
+			<ul class="nav pull-right">
+				<li><%= link_to "Calendar", calendar_path %></li>
+				<li><%= link_to "Events", events_path  %></li>				
+				<li><%= link_to "Log In", '#'%></li>
+				<li><%= link_to "Log Out", '#'%></li>
+			</ul>
+		</nav>
+	</div>		
+</header>
+<h3>New Event</h3>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', events_path %>
+
+<p class= "float-text-right-new vr">
+  <u><b>Current Events for @USER.NAME</b></u><br><br>
+  <% @events.each do |event| %>
+   	<b>Event Name:</b> <%= event.name %><br><br>  	
+   	<b>Start Time:</b> <%= event.start_at %><br><br> 
+    <b>End Time:</b> <%= event.end_at %><br><br>	
+    [<%= link_to 'Show/Edit Event', event %>]
+    [<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]
+    <br> <br> 
+<% end %>
+
+</p>

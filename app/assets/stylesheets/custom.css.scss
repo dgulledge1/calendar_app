@@ -20,11 +20,14 @@ body {
 h1{
   color: #000;
   font-family: "Estrangelo Edessa", Georgia, Arial;
-  font-size: 3.2em;
+  font-size: 2.0em;
   letter-spacing: 0.5px;
   text-align: center;
 }
 
+h2{
+  margin: -1px 0px;
+}
 
 div.navbar-inner
 {
@@ -36,20 +39,76 @@ div.navbar-inner
 
 
 
-.float-text-right{
-  position: absolute;
-  top: 200px;
-  right: 550px;
-  z-index: 1;
+p.float-text-right{
+  position: relative;
+  top: -600px;
+  text-align: right;
+  margin-right: 250px;
+
   }
 
+
 .field{
-  position: fixed;
-  top: 150px;
-  left: 650px;
-  width: 20px;
+  margin-left: 15px;
 }
 
+.notice{
+  margin-left: 15px;
+}
+
+.actions{
+  margin-left: 15px;
+}
 .hero-unit{
   background-color: #FFFFCC;
 }
+
+.nav > li > a {
+  color: #b43939;
+  line-height: 12px;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  font-size: 1.2em;
+  text-shadow: 0px black 0px black 0px black 0px black;
+  
+}
+
+.navbar-inverse .nav > li > a {
+  color: #b43939;
+  &:visited {
+    color:#922b2b;
+  }
+  &:hover{
+    color: black;
+  } 
+}
+
+
+
+hr {
+  margin-top: -25px;
+  margin-bottom: 12px;
+  margin-left: 15px;
+  border-style: solid;
+  border-color: black;
+}
+
+h3{
+  margin-left: 15px;
+}
+
+.vr
+{
+  border-left: 1px dotted black;
+  max-height: 5000%;
+  height: 150%;
+  margin-top: 100px;
+  margin-left: 1250px;
+}
+
+p.float-text-right-new{
+  position: relative;
+  top: -400px;
+  text-align: right;
+  margin-right: 250px;
+
+  }
