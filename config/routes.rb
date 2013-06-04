@@ -1,4 +1,30 @@
 CalTest::Application.routes.draw do
+  devise_for :users
+
+  resources :events
+  resources :users
+  
+
+  match '/calendar(/:year(/:month))' => 'users#calendar', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  match '/events' => 'events#index'
+  match '/newevent' => 'events#new'
+  match '/delete_event' => 'events#destroy'
+  match '/showevent' => 'users/events#show'
+  
+  devise_scope :user do
+    get '/signup' => 'devise/registrations#new'
+  end
+  
+  devise_scope :user do
+    root to: 'devise/sessions#new'
+    get '/signin' => 'devise/sessions#new'
+    post 'signin' => 'devise/sessions#create'    
+  end
+  
+  devise_scope :user do
+    delete '/signout' => 'devise/sessions#destroy'
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

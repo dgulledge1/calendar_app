@@ -27,6 +27,7 @@ h1{
 
 h2{
   margin: -1px 0px;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
 }
 
 div.navbar-inner
@@ -92,6 +93,15 @@ hr {
   border-color: black;
 }
 
+hr.hr-event{ 
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  margin-left: 810px;
+  border-style: solid;
+  border-color: black;
+}  
+
 h3{
   margin-left: 15px;
 }
@@ -107,8 +117,50 @@ h3{
 
 p.float-text-right-new{
   position: relative;
-  top: -400px;
+  top: -443px;
   text-align: right;
   margin-right: 250px;
-
   }
+
+p{
+  color:black;
+  padding: 6px;  
+  font-size: 0.8em;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+}
+
+.new_user{
+  margin-left: 400px;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  font-size: 1.2em;
+}
+
+h4{
+  font-size: 4em;
+  text-align: center;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  margin-top: -50px;
+  padding: 10px;
+}
+
+.login-field
+{
+  text-align: center;
+  margin-left: -395px;
+  padding: 5px;
+}
+
+.login-action
+{
+  text-align: center;
+  margin-left: -395px;
+  padding: 5px;
+}
+
+p.login-form{
+  text-align: center;
+  padding: -5px;
+   font-size: 1.3em;
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+}
+

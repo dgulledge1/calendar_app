@@ -6,18 +6,25 @@
 		</center>
 		<nav>
 			<ul class="nav pull-right">
-				<li></li>
-				<li><%= link_to "Calendar", calendar_path  %></li>
-				<li><%= link_to "New Event", new_event_path %></li>
-				<li><%= link_to "Log In", '#'%></li>
-				<li><%= link_to "Log Out", '#'%></li>
+				<% if user_signed_in?%>
+					<li><p>Logged in as <%= current_user.email %> | Not you?</p></li>					
+					<li><%= link_to "Log Out", signout_path, :method => :delete%></li>
+					<li><%= link_to "Calendar", calendar_path  %></li>
+					<li><%= link_to "New Event", newevent_path %></li>
+				<% else %>
+					<li><p>New User? </p></li>
+					<li><%= link_to "Sign Up", signin_path %></li> 
+					<li><p>Already have an account?</p></li>
+					<li><%= link_to "Sign In", signup_path %></li>					
+				<% end %>			
 			</ul>
 		</nav>
 	</div>		
 </header>
-<h1><center>Events List for USER.NAME</center></h1>
-
-<table align="center">
+<% if user_signed_in?%>
+	<h1><center>Events List for <%= current_user.email %></center></h1>
+	<hr class= "hr-event"  size="3" noshade width="15%">
+	<table align="center">
 
   <tr>
   	<th>&nbsp</th>
@@ -33,25 +40,26 @@
     <th></th>
   </tr>
 
-<% @events.each do |event| %>
-  <tr>
-  	<td>&nbsp</td>
-  	<td>&nbsp</td>
-  	<td><%= event.name %></td>
-  	<td> | </td>
-    <td>&nbsp</td>
-    <td><%= event.start_at %> </td>
-    <td>   |   </td>
-    <td>&nbsp</td>
-    <td><%= event.end_at %></td>
-	<td>&nbsp</td>
-    <td>[<%= link_to 'Show/Edit', event %>] </td>
-    <td>[<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>       
-  </tr>
+	<% @events.each do |event| %>
+  	<tr>
+  		<td>&nbsp</td>
+  		<td>&nbsp</td>
+  		<td><%= event.name %></td>
+  		<td> | </td>
+    	<td>&nbsp</td>
+    	<td><%= event.start_at %> </td>
+    	<td>   |   </td>
+    	<td>&nbsp</td>
+    	<td><%= event.end_at %></td>
+		<td>&nbsp</td>
+    	<td>[<%= link_to 'Show/Edit', event %>] </td>
+    	<td>[<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>       
+  	</tr>
+	<% end %>
+
+	</table>
+<% else %>
+	<h1> YOU NEED TO LOG IN TO SEE THIS PAGE</h1>
 <% end %>
-
-</table>
-
-<br />
 
 

@@ -6,33 +6,43 @@
 		</center>
 		<nav>
 			<ul class="nav pull-right">
-				<li><%= link_to "Calendar", calendar_path %></li>				
-				<li><%= link_to "Events", events_path  %></li>	
-				<li><%= link_to "New Event", new_event_path %></li>			
-				<li><%= link_to "Log In", '#'%></li>
-				<li><%= link_to "Log Out", '#'%></li>
+				<% if user_signed_in?%>
+					<li><p>Logged in as <%= current_user.email %> | Not you?</p></li>					
+					<li><%= link_to "Log Out", signout_path, :method => :delete%></li>
+					<li><%= link_to "Calendar", calendar_path %></li>			
+					<li><%= link_to "Events", events_path  %></li>	
+					<li><%= link_to "New Event", new_event_path %></li>
+				<% else %>
+					<li><p>New User? </p></li>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li> 
+					<li><p>Already have an account?</p></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>					
+				<% end %>								
 			</ul>
 		</nav>
 	</div>		
 </header>
 <p id="notice"><%= notice %></p>
-<h3>@USER.NAME</h3><br>
+<% if user_signed_in? %>
+<h3><%= current_user.email %></h3><br>
 <hr size="3" noshade width="15%" align="left">
 <h3><%= @event.name %></h3>
 <%= render 'form' %>
 <div class= "vr"></div>
 <p class= "float-text-right vr">
-  <u><b>Events for @USER.NAME</b></u><br><br>
+  <u><b>Events for <%= current_user.email %></b></u><br><br>
   <% @events.each do |event| %>
    	<b>Event Name:</b> <%= event.name %><br><br>  	
    	<b>Start Time:</b> <%= event.start_at %><br><br> 
     <b>End Time:</b> <%= event.end_at %><br><br>	
     [<%= link_to 'Show/Edit Event', event %>]
     [<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]
-    <br> <br> 
+   <br><br>
 <% end %>
 
 </p>
 
+<% else %>
+<h1>YOU NEED TO LOG IN TO SEE THIS PAGE</h1>
 
-
+<% end %>
