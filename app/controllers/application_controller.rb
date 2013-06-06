@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
     calendar_path
   end
   
+  private
   def after_sign_out_path_for(resource_or_scope)
-    request.referrer
+    root_path
   end
 end

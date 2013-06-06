@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604161421) do
+ActiveRecord::Schema.define(:version => 20130606144609) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130604161421) do
     t.datetime "updated_at", :null => false
     t.string   "user_email"
     t.integer  "user_id"
+    t.string   "recurrence"
   end
 
   create_table "users", :force => true do |t|

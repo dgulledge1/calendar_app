@@ -1,9 +1,9 @@
 <%= provide(:title, 'Events')%>
 <header class= "navbar navbar-fixed-top navbar-inverse">
 	<div class ="navbar-inner">
-		<center>
-	    <h2>CALENDAR APP</h2>
-		</center>
+	
+	    <h2 class= "pull-left">Asynchronous Quality User Agendas App</h2>
+	
 		<nav>
 			<ul class="nav pull-right">
 				<% if user_signed_in?%>
@@ -23,7 +23,7 @@
 </header>
 <% if user_signed_in?%>
 	<h1><center>Events List for <%= current_user.email %></center></h1>
-	<hr class= "hr-event"  size="3" noshade width="15%">
+
 	<table align="center">
 
   <tr>
@@ -36,8 +36,9 @@
     <th>&nbsp</th>
 	<th>&nbsp</th>
     <th>End at</th>
-    <th></th>
-    <th></th>
+    <th>&nbsp</th>
+	<th>&nbsp</th>
+	<th>Occurs</th>
   </tr>
 
 	<% @events.each do |event| %>
@@ -51,7 +52,9 @@
     	<td>   |   </td>
     	<td>&nbsp</td>
     	<td><%= event.end_at %></td>
+    	<td> | </td>
 		<td>&nbsp</td>
+		<td><%= event.recurrence %></td>
     	<td>[<%= link_to 'Show/Edit', event %>] </td>
     	<td>[<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>       
   	</tr>

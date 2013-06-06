@@ -1,10 +1,8 @@
 <%= provide(:title, @event.name)%>
 <header class= "navbar navbar-fixed-top navbar-inverse">
 	<div class ="navbar-inner">
-		<center>
-	 	<h2>CALENDAR APP</h2>	
-		</center>
-		<nav>
+		 	<h2 class="pull-left">Asynchronous Quality User Agendas App</h2>	
+			<nav>
 			<ul class="nav pull-right">
 				<% if user_signed_in?%>
 					<li><p>Logged in as <%= current_user.email %> | Not you?</p></li>					
@@ -29,18 +27,19 @@
 <h3><%= @event.name %></h3>
 <%= render 'form' %>
 <div class= "vr"></div>
-<p class= "float-text-right vr">
+<h5 class= "float-text-right vr">
   <u><b>Events for <%= current_user.email %></b></u><br><br>
   <% @events.each do |event| %>
    	<b>Event Name:</b> <%= event.name %><br><br>  	
    	<b>Start Time:</b> <%= event.start_at %><br><br> 
-    <b>End Time:</b> <%= event.end_at %><br><br>	
+    <b>End Time:</b> <%= event.end_at %><br><br>
+    <b>Occurs:</b> <%= event.recurrence %><br><br>	
     [<%= link_to 'Show/Edit Event', event %>]
     [<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]
    <br><br>
 <% end %>
 
-</p>
+</h5>
 
 <% else %>
 <h1>YOU NEED TO LOG IN TO SEE THIS PAGE</h1>

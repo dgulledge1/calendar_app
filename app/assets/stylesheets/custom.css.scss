@@ -40,7 +40,7 @@ div.navbar-inner
 
 
 
-p.float-text-right{
+.float-text-right{
   position: relative;
   top: -600px;
   text-align: right;
@@ -61,6 +61,7 @@ p.float-text-right{
   margin-left: 15px;
 }
 .hero-unit{
+ 
   background-color: #FFFFCC;
 }
 
@@ -74,12 +75,12 @@ p.float-text-right{
 }
 
 .navbar-inverse .nav > li > a {
-  color: #b43939;
+  color: $orange;
   &:visited {
-    color:#922b2b;
+    color: darken($orange, 10%);
   }
   &:hover{
-    color: black;
+    color: $btnWarningBackground;
   } 
 }
 
@@ -104,6 +105,7 @@ hr.hr-event{
 
 h3{
   margin-left: 15px;
+  font-family: "Wingdings", Segoe UI, Georgia, Arial;
 }
 
 .vr
@@ -115,7 +117,7 @@ h3{
   margin-left: 1250px;
 }
 
-p.float-text-right-new{
+.float-text-right-new{
   position: relative;
   top: -443px;
   text-align: right;
@@ -157,10 +159,91 @@ h4{
   padding: 5px;
 }
 
-p.login-form{
+.login-form{
   text-align: center;
   padding: -5px;
    font-size: 1.3em;
   font-family: "Estrangelo Edessa", Georgia, Arial;
 }
 
+.nav.pull-right{
+  margin-top: 5px;
+}
+
+.nav.pull-right-cal{
+  float: right;
+  margin-top: -40px;
+}
+
+.pull-left{
+  margin-left: 15px;
+}
+
+h5 {
+  font-family: "Estrangelo Edessa", Georgia, Arial;
+  font-size: 1.3em;
+}
+
+td > a{
+  color: $orange;
+  &:visited {
+    color: darken($orange, 10%);
+  }
+  &:hover{
+    color: $btnWarningBackground;
+  } 
+}
+
+a {
+  color: $orange;
+  &:visited {
+    color: darken($orange, 10%);
+  }
+  &:hover{
+    color: $btnWarningBackground;
+  } 
+}
+
+.landing-text-top {
+  text-align: center;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+  text-outline: 2px 2px #000;
+  
+}
+
+.landing-text-middle {
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; 
+  text-outline: 1px 1px #000;
+}
+
+.capital-letter {
+  font-size: 4.5em;
+}
+
+.hero-unit{
+  background-color: darken($orange, 10%)
+}
+
+
+.hero-unit-landing{ 
+  background-image: url(office.jpg); 
+  background-position: center;
+  height: 400px;
+  }
+  
+.pull-right-landing{
+  padding: 15px;
+  margin-right: 10px;
+}

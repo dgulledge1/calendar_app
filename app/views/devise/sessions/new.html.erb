@@ -1,5 +1,26 @@
 <% provide(:title, 'Sign In')%>
-<h4>Sign In</h4>
+<header class= "navbar navbar-fixed-top navbar-inverse">
+	<div class ="navbar-inner">
+	 	<h2 class= "pull-left">Asynchronous Quality User Agendas App</h2>	
+		<nav>
+			<ul class="nav pull-right">
+				<% if user_signed_in?%>
+					<li><p>Logged in as <%= current_user.email %> | Not you?</p></li>					
+					<li><%= link_to "Log Out", signout_path, :method => :delete%></li>
+					<li><%= link_to "Calendar", calendar_path %></li>
+					<li><%= link_to "Events", events_path  %></li>
+				<% else %>
+					<li><p>New User? </p></li>
+					<li><%= link_to "Sign Up", signup_path %></li> 
+					<li><p>Already have an account?</p></li>
+					<li><%= link_to "Sign In", signin_path %></li>					
+				<% end %>
+				
+			</ul>
+		</nav>
+	</div>		
+</header>
+
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div class="login-field"><%= f.label :email %><br />
@@ -14,5 +35,7 @@
 
   <div class="login-action"><%= f.submit "Sign in" %></div>
 <% end %>
-
+<br><br>
+<h5><center>Don't have an account?</center></h5>
 <%= render "devise/shared/links" %>
+<center><%= link_to "Return to Landing",  root_path%></center>

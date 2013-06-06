@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
-  belongs_to :user
-  attr_accessible :end_at, :name, :start_at
+  include IceCube
+  belongs_to :user  
+  
+  attr_accessible :end_at, :name, :start_at, :recurrence
   has_event_calendar
 end

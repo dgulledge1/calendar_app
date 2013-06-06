@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 gem 'event-calendar', require: 'event_calendar'
 gem 'devise', '~> 2.2.4'
+gem "ice_cube", "~> 0.10.1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,0 +1,55 @@
+<%= provide(:title, 'Landing Page')%>
+<header class= "navbar navbar-fixed-top navbar-inverse">
+	<div class ="navbar-inner">
+	 	<h2 class= "pull-left">Asynchronous Quality User Agendas App</h2>	
+		<nav>
+			<ul class="nav pull-right">
+				<% if user_signed_in?%>
+					<li><p>Logged in as <%= current_user.email %> | Not you?</p></li>					
+					<li><%= link_to "Log Out", signout_path, :method => :delete%></li>
+					<li><%= link_to "Calendar", calendar_path %></li>
+					<li><%= link_to "Events", events_path  %></li>
+				<% else %>
+					<li><p>New User? </p></li>
+					<li><%= link_to "Sign Up", signup_path %></li> 
+					<li><p>Already have an account?</p></li>
+					<li><%= link_to "Sign In", signin_path %></li>					
+				<% end %>
+				
+			</ul>
+		</nav>
+	</div>		
+</header>
+<body>
+	<div class= "hero-unit-landing">
+		<br><br><br><br>
+	<h2 class="landing-text-top">Need a robust, fully-featured scheduling app, but not a lot of time to train?<br>
+		Need to deploy to a large amount of users, but have a small IT staff?<br>
+		Are other scheduling apps simply too expensive?</h2><br>
+		
+	<h1 class="landing-text-middle">YOUR SOLUTION HAS ARRIVED.<br>SAY HELLO TO THE A.Q.U.A. APP</h1>
+	</div>
+	<br><br>
+	<div class= "hero-unit pull-left">
+		<h2>Features of the A.Q.U.A. App</h2>
+		<ul class= "pull-right">
+			<li>Flexibility and Scalability</li>
+			<li>Per-User Schedules</li>
+			<li>Promotes Synergy</li>
+			<li>Promotes the Paradigm Shift Ideal</li>
+			<li>Six Sigma Certified</li>
+		</ul>
+	</div>
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	<div class= "hero-unit pull-right">
+		<h2>PULL RIGHT</h2>
+		<h2>This is another hero unit to display other things</h2>
+	</div>
+    <%= link_to "Sign Up", signup_path, class: "btn btn-large"%>
+</body>
+</html>

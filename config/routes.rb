@@ -4,7 +4,7 @@ CalTest::Application.routes.draw do
   resources :events
   resources :users
   
-
+  
   match '/calendar(/:year(/:month))' => 'users#calendar', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   match '/events' => 'events#index'
   match '/newevent' => 'events#new'
@@ -16,7 +16,7 @@ CalTest::Application.routes.draw do
   end
   
   devise_scope :user do
-    root to: 'devise/sessions#new'
+    root to: 'devise#landing'
     get '/signin' => 'devise/sessions#new'
     post 'signin' => 'devise/sessions#create'    
   end

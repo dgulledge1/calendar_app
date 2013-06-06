@@ -1,5 +1,4 @@
 
-
 body {
   background-color: #fff;
   color: #333;
@@ -8,29 +7,20 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, ol, ul{
   font-family: "Estrangelo Edessa", Georgia, Arial;
   font-size: 17px;
   line-height: 18px;
+  color: white;
 }
 
 pre {
-  background-color: #eee;
+  background-color: #ffffff;
   padding: 10px;
   font-size: 11px;
 }
 
-a {
-  
-  color: #b43939;
-  &:visited {
-    color: #922b2b;
-  }
-  &:hover {
-    color: #5e2020;
-    
-  }
-}
+
 
 div {
   &.field, &.actions {

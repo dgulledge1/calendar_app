@@ -4,15 +4,14 @@
 <%= provide(:title, I18n.localize(@shown_month, :format => "%B %Y"))%>
 <header class= "navbar navbar-fixed-top navbar-inverse">
 	<div class ="navbar-inner">
-		<center>
-	
+		<center>	
 	    << <%= month_link(@shown_month.prev_month) %> | <%= I18n.localize(@shown_month, :format => "%B %Y") %> | <%= link_to  month_link(@shown_month.next_month) %> >> <br>
 		<%= link_to "Go to Current Month", calendar_path %>
 		<br>
 
 		</center>
 		<nav>
-			<ul class="nav pull-right">
+			<ul class="nav pull-right-cal">
 				<% if user_signed_in?%>
 					<li><p>Welcome, <%= current_user.email %> | Not you?</p></li>					
 					<li><%= link_to "Log Out", signout_path, :method => :delete%></li>
