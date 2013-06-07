@@ -60,8 +60,8 @@ div.navbar-inner
 .actions{
   margin-left: 15px;
 }
-.hero-unit{
- 
+
+.hero-unit{ 
   background-color: #FFFFCC;
 }
 
@@ -105,7 +105,7 @@ hr.hr-event{
 
 h3{
   margin-left: 15px;
-  font-family: "Wingdings", Segoe UI, Georgia, Arial;
+  font-family: "Segoe UI Light", Segoe UI, Georgia, Arial;
 }
 
 .vr
@@ -181,7 +181,9 @@ h4{
 
 h5 {
   font-family: "Estrangelo Edessa", Georgia, Arial;
-  font-size: 1.3em;
+  font-size: 1.8em;
+
+  letter-spacing: 1.25px;
 }
 
 td > a{
@@ -232,18 +234,24 @@ a {
   font-size: 4.5em;
 }
 
-.hero-unit{
-  background-color: darken($orange, 10%)
+.hero-unit-landing{
+  background-color: darken($orange, 15%);
+  border-radius: 650px 650px 650px 650px;
+  padding: 40px;
 }
 
 
-.hero-unit-landing{ 
+.hero-unit-landing-header{ 
   background-image: url(office.jpg); 
   background-position: center;
   height: 400px;
   }
   
-.pull-right-landing{
-  padding: 15px;
-  margin-right: 10px;
+.right-landing{
+  margin-right: 15px;
+}
+
+.center-landing{
+  margin-left: 500px;
+  margin-right: 500px;  
 }
