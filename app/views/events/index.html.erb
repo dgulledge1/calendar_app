@@ -39,6 +39,9 @@
     <th>&nbsp</th>
 	<th>&nbsp</th>
 	<th>Occurs</th>
+	<th>&nbsp</th>
+	<th>&nbsp</th>
+	<th>User Email</th>
   </tr>
 
 	<% @events.each do |event| %>
@@ -55,6 +58,9 @@
     	<td> | </td>
 		<td>&nbsp</td>
 		<td><%= event.recurrence %></td>
+		<td>&nbsp</td>
+		<td> | </td>
+		<td><%= event.user_email %></td>
     	<td>[<%= link_to 'Show/Edit', event %>] </td>
     	<td>[<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]</td>       
   	</tr>

@@ -45,6 +45,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        @event.user_email = current_user.email
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else

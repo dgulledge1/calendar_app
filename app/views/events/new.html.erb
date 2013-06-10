@@ -34,7 +34,8 @@
    		<b>Event Name:</b> <%= event.name %><br><br>  	
    		<b>Start Time:</b> <%= event.start_at %><br><br> 
     	<b>End Time:</b> <%= event.end_at %><br><br>
-    	<b>Occurs:</b> <%= event.recurrence %><br><br>	
+    	<b>Occurs:</b> <%= event.recurrence %><br><br>
+    	<b>Email to:</b> <%= event.user_email %><br><br>	
     	[<%= link_to 'Show/Edit Event', event %>]
     	[<%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %>]
     	<br> <br> 
